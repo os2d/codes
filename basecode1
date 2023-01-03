@@ -825,7 +825,7 @@ content in the body of the posts - quotes, asks, etc
     border-top-right-radius: 0;
 }
 
-.asker, div.answerer{
+div.asker, div.answerer{
     display: flex;
     gap: 0.5rem;
     align-items: center;
