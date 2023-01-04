@@ -76,7 +76,7 @@ use catbox.moe to host music
 <meta name="color:post bg" content=""/>
 <meta name="color:post border" content=""/>
 <meta name="color:small accents" content=""/>
-<meta name="color:header bg" content="#ffffff"/>
+<meta name="color:header bg" content=""/>
 <meta name="color:header border" content=""/>
 
 <meta name="color:icon border" content=""/>
@@ -1523,7 +1523,7 @@ margin:10px;
                     <a href='{text:link 2 url}'>{text:link 2}</a> 
                     <a href='{text:link 3 url}'>{text:link 3}</a>
                 </div>
-                <div class='pix' style='width: 50%;
+                <div class='pix' style='min-width: 10rem;
 justify-content: space-evenly;
 margin: auto;'>
                     <a href='{text:link 1 url}' title='{text:link 1}'>
