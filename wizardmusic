@@ -827,7 +827,7 @@ margin: auto;
     display:block;
 }
 
-.information-links.pixel-links, .information-links.normal-links{
+.header .information-links.pixel-links, .information-links.normal-links{
     margin-top:0.5em;
 }
 
