@@ -811,7 +811,7 @@ justify-content: space-around;
 .information-links.pixel-links .pix{
     display:flex;
     align-items:center;
-    grid-gap:0.25rem;
+    grid-gap:0.5rem;
 }
 
 .information-links.pixel-links .pix a img{
