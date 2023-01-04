@@ -69,7 +69,7 @@ use catbox.moe to host music
 <meta name="image:bg" content="">
 <meta name="image:post bg" content="">
 <meta name="image:post image border" content="">
-<meta name="image:header bg" content="">
+<meta name="image:header bg" content="#fff">
 <meta name="image:header image border" content="">
 
 <meta name="color:bg" content=""/>
