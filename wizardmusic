@@ -578,6 +578,10 @@ border-bottom: none;
   filter: drop-shadow(1rem 1rem 0.25rem {color:container accent}6e);
 }
 
+#wrapper.dropped-shadows #content .post, #wrapper.dropped-shadows #content .post.answer .question_container,  #wrapper.dropped-shadows #content .post.answer .answer_container{
+    backdrop-filter:none !important;
+}
+
 /*Start of header Stuff*/
 
 #header{
@@ -633,7 +637,7 @@ border-bottom: none;
     margin:0.5rem auto;
 }
 
-.description .information-links.norm-links, .description .information-links.pixel-links{
+.description .information-links .norm, .description .information-links.pix{
      margin-top:0.5rem;
 }
 
@@ -780,13 +784,14 @@ align-items: center;
 
 a.tiny-icon{
     height: 100%;
-display: block;
+display: flex;
+align-items:center;
 width: fit-content;
 }
 
 .tiny-icon img{
     display:block;
-    height:100%;
+    height:calc(100% - 2*{select:icon border width}px);
     border:{select:icon border width}px {select:icon border style} {color:icon border};
     
     {block:ificonglow}
@@ -811,12 +816,21 @@ justify-content: space-around;
 .information-links.pixel-links .pix{
     display:flex;
     align-items:center;
-    grid-gap:0.5rem;
+    grid-gap:0.25rem;
+    min-width:5rem;
+    
+justify-content: space-evenly;
+margin: auto;
 }
 
 .information-links.pixel-links .pix a img{
     display:block;
 }
+
+.information-links.pixel-links, .information-links.normal-links{
+    margin-top:0.5em;
+}
+
 /*End of Sticky header*/
 
 
@@ -918,24 +932,38 @@ justify-content: space-around;
     background:{color:post bg}38;
     background-image:none;
     backdrop-filter:blur(2px);
+    
+    {block:iffuzzypostbg}
+    border:none;
+    box-shadow:0 0 0.5rem 0.5rem {color:post bg}38;
+    {/block:iffuzzypostbg}
 }
 .forty-percent{
     background:{color:post bg}69;
     background-image:none;
     backdrop-filter:blur(2px);
-    
+    {block:iffuzzypostbg}
+    border:none;
+    box-shadow:0 0 0.5rem 0.5rem {color:post bg}69;
+    {/block:iffuzzypostbg}
 }
 .sixty-percent{
     background:{color:post bg}94;
     background-image:none;
     backdrop-filter:blur(2px);
-    
+    {block:iffuzzypostbg}
+    border:none;
+    box-shadow:0 0 0.5rem 0.5rem {color:post bg}94;
+    {/block:iffuzzypostbg}
 }
 .eighty-percent{
     background:{color:post bg}a6;
     background-image:none;
     backdrop-filter:blur(2px);
-    
+    {block:iffuzzypostbg}
+    border:none;
+    box-shadow:0 0 0.5rem 0.5rem {color:post bg}a6;
+    {/block:iffuzzypostbg}
 }
 
 #header img, .post img{
@@ -982,6 +1010,12 @@ content in the body of the posts - quotes, asks, etc
 .text h1 {
   font-size: 1.5em;
   margin: 1rem 0;
+}
+
+.text blockquote{
+    border-left: 1px solid {color:small accents};
+margin-left: 1rem;
+padding-left: 1rem;
 }
 
 .line .label{
@@ -1523,9 +1557,7 @@ margin:10px;
                     <a href='{text:link 2 url}'>{text:link 2}</a> 
                     <a href='{text:link 3 url}'>{text:link 3}</a>
                 </div>
-                <div class='pix' style='min-width: 10rem;
-justify-content: space-evenly;
-margin: auto;'>
+                <div class='pix'>
                     <a href='{text:link 1 url}' title='{text:link 1}'>
                         <img src='{image:pixel link 1}'>
                     </a>
